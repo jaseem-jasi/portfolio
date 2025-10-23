@@ -1,0 +1,171 @@
+<button id="toggleMode" style="margin-left:1em; padding:10px; border-radius:20px;">🌗</button>
+
+
+
+/* Light Mode */
+body.light-mode {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+body.light-mode header {
+  background: rgba(241, 245, 249, 0.9);
+}
+body.light-mode .logo {
+  color: #2563eb;
+}
+body.light-mode nav ul li a {
+  color: #1e293b;
+}
+body.light-mode nav ul li a:hover {
+  color: #2563eb;
+}
+body.light-mode .hero {
+  background: radial-gradient(circle at top left, #93c5fd, #f1f5f9);
+}
+body.light-mode .hero-content h2 {
+  color: #1e293b;
+}
+body.light-mode .typing-text {
+  color: #334155;
+}
+body.light-mode .btn {
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  color: #1e293b;
+}
+body.light-mode .hero-img img {
+  border: 5px solid #2563eb;
+  background-color: #ffffff7d;
+}
+body.light-mode section {
+  color: #1e293b;
+}
+body.light-mode .skill-list span {
+  background: #e2e8f0;
+  border: 2px solid #2563eb;
+  color: #1e293b;
+}
+body.light-mode .skill-list span:hover {
+  background: #2563eb;
+  color: #f1f5f9;
+  box-shadow: 0 0 15px #2563eb;
+}
+body.light-mode .projects {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+body.light-mode .project-card {
+  background: #f1f5f9;
+}
+body.light-mode .project-info h3 {
+  color: #2563eb;
+}
+body.light-mode .project-card a:hover h3 {
+  color: #b45309;
+}
+
+
+document.getElementById("toggleMode").onclick = function() {
+  document.body.classList.toggle("light-mode");
+};
+
+
+
+
+
+
+<h2>Projects</h2>
+    <div class="project-grid"> <!-- Renovize Project -->
+      <div class="project-card"> <a href="https://jaseem-jasi.github.io/Renovize-Renovation/" target="_blank"> <img
+            src="renovize.png" alt="Renovize Renovation Project">
+          <div class="project-info">
+            <h3>Renovize - Renovation Website</h3>
+            <p>A responsive renovation company website built using HTML, CSS, and JavaScript — featuring elegant design
+              and smooth animations.</p>
+          </div>
+        </a> </div> <!-- Restaurant Project -->
+      <div class="project-card"> <a href="https://restaurant-react-sandy.vercel.app/" target="_blank"> <img
+            src="mandhi restaurant.png" alt="Restaurant Ordering System">
+          <div class="project-info">
+            <h3>Mandhi - Restaurant Website</h3>
+            <p>An online restaurant ordering and table reservation system developed using React, offering menu browsing
+              and cart functionality.</p>
+          </div>
+        </a> </div> <!-- More Project -->
+      <div class="project-card"> <a href="https://github.com/jaseem-jasi?tab=repositories" target="_blank"> <img
+            src="GitHub_Logo_White.png" alt="GitHub">
+          <div class="project-info">
+            <h3>Employee Review System</h3>
+            <p>A Django-based full-stack project with employee & admin login, user reviews, and CRUD management for both
+              staff and feedback data.</p>
+          </div>
+        </a> </div>
+    </div>
+
+
+/* Projects Section */
+.projects {
+  padding: 80px 20px;
+  background: #111827;
+  color: white;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  color: #38bdf8;
+  margin-bottom: 30px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background: #1e293b;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.project-info h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #38bdf8;
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #e2e8f0;
+}
+
+.project-card a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.project-card a:hover h3 {
+  color: #facc15;
+}
