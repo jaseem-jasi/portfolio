@@ -8,77 +8,71 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="dark">
-  <!-- Header -->
-  <header>
-    <nav>
-      <h1 class="logo">Jaseem</h1>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <!-- Dark/Light Toggle -->
-      <div class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
-        🌙
-      </div>
-
-      <!-- Mobile Menu Toggle -->
-      <div class="menu-toggle" id="menuToggle">☰</div>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <div class="hero">
-    <div class="hero-content">
+<body>
+  <!-- main -->
+  <div class="main">
+    <div class="main-content">
       <h2>Hi, I’m <span class="highlight">Muhammed Jaseem T H</span></h2>
       <p class="typing-text"></p>
       <a href="#contact" class="btn">Hire Me</a>
+      <a href="aboutme.html" class="about-btn">About Me</a>
     </div>
-    <div class="hero-img">
+
+    <div class="main-img">
       <img src="bg-removebg-preview.png" alt="Muhammed Jaseem" />
     </div>
 
     <svg class="snake-bg" viewBox="0 0 1000 400" preserveAspectRatio="none">
-      <path d="M0 100 Q 400 300, 800 100 T 1200 100" />
-      <path d="M1500 100 Q 900 200, 600 100 T 0 100" fill="transparent"
-        stroke="rgba(56, 189, 248, 0.6)" stroke-width="3">
-        <animate attributeName="stroke-dasharray" values="0,2000;2000,0"
-          dur="5s" repeatCount="indefinite" />
+      <path d="M1500 100 Q 900 200, 200 100 T 0 100" fill="transparent" stroke="rgba(56, 189, 248, 0.6)"
+        stroke-width="1.2">
+        <animate attributeName="stroke-dasharray" values="0,2000;2000,0" dur="5s" repeatCount="indefinite" />
       </path>
+      <path class="second" d="M0 300 Q 200 100, 800 300 T 1000 100" />
     </svg>
-  </div>
 
-  <!-- About -->
-  <section id="about" class="about fade-in">
-    <h2>About Me</h2>
-    <p>
-      I am a fresher web developer from India, skilled in front-end development
-      with strong knowledge of HTML, CSS, JavaScript, and PHP. I hold a
-      Bachelor's degree in Computer Applications from Srinivas University. I
-      have also worked on system administration for SaaS platforms like Jira
-      and Confluence.
-    </p>
-  </section>
+    <div class="main-icons">
 
-  <!-- Skills -->
-  <section id="skills" class="skills fade-in">
-    <h2>Skills</h2>
-    <div class="skill-list">
-      <span>HTML</span><span>CSS</span><span>JavaScript</span>
-      <span>PHP</span><span>Python</span><span>Django</span>
-      <span>React</span><span>Git</span>
+      <div class="tech-item" id="html">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
+      </div>
+
+      <div class="tech-item" id="css">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" />
+      </div>
+
+      <div class="tech-item" id="javascript">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+      </div>
+
+      <div class="tech-item" id="react">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" />
+      </div>
+
+      <div class="tech-item" id="python">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" />
+      </div>
+
+      <div class="tech-item" id="django">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg" />
+      </div>
+
+      <div class="tech-item" id="php">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+      </div>
+
+      <div class="tech-item" id="mysql">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
+      </div>
     </div>
-  </section>
+
+  </div>
 
   <!-- Projects -->
   <section id="projects" class="projects fade-in">
     <h2>Projects</h2>
     <div class="project-grid">
       <div class="project-card">
+        <div class="live-badge">● Live project</div>
         <a href="https://jaseem-jasi.github.io/Renovize-Renovation/" target="_blank">
           <img src="renovize.png" alt="Renovize Project" />
           <div class="project-info">
@@ -89,18 +83,21 @@
         </a>
       </div>
       <div class="project-card">
+        <div class="live-badge">● Live project</div>
         <a href="https://restaurant-react-sandy.vercel.app/" target="_blank">
           <img src="mandhi restaurant.png" alt="Mandhi Restaurant Project" />
           <div class="project-info">
             <h3>Mandhi - Restaurant Website</h3>
-            <p>An online restaurant ordering and table reservation system built
-              with React, including cart and menu browsing.</p>
+            <p>
+              A modern React-based restaurant website featuring smooth section scrolling,
+              interactive quantity selection with sliding animations, and dynamic cart functionality.
+            </p>
           </div>
         </a>
       </div>
       <div class="project-card">
         <a href="https://github.com/jaseem-jasi?tab=repositories" target="_blank">
-          <img src="GitHub_Logo_White.png" alt="GitHub" />
+          <img src="GitHub Logo.jpg" alt="GitHub" />
           <div class="project-info">
             <h3>Employee Review System</h3>
             <p>A Django-based full-stack project with employee & admin login,
@@ -111,38 +108,34 @@
     </div>
   </section>
 
-  <!-- Experience -->
-  <section id="experience" class="experience fade-in">
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>System Admin (SaaS)</strong> – Jira & Confluence configuration</li>
-      <li><strong>Fresher Projects</strong> – React practice, Django CRUD apps</li>
-      <li><strong>Internship/Tests</strong> – Shopify Dev, IT Support Interviews</li>
-    </ul>
-  </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact fade-in">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <section id="contact" class="contact-section fade-in">
 
-    <div class="socials">
-      <p>📧 Email: jaseem@example.com</p>
-      <p>🔗 GitHub: <a href="https://github.com/jaseem-jasi" target="_blank">github.com/jaseem-jasi</a></p>
-      <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/muhammed-jaseem-t-h-365789223/"
-          target="_blank">linkedin.com/in/jaseem</a></p>
+    <div class="contact-box">
+
+      <h2>Let’s Connect</h2>
+      <p>I’m available for freelance work, collaborations, and full-time opportunities.</p>
+
+      <div class="contact-buttons">
+
+        <!-- Email Button -->
+        <button id="emailBtn" class="contact-btn email-btn">
+          📧 Send Email
+        </button>
+
+        <!-- WhatsApp Button -->
+        <button onclick="window.open('https://wa.me/971524896895?text=Hi%20Muhammed%20Jaseem,%0A%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project%20with%20you.%0A%0ALooking%20forward%20to%20your%20response.', '_blank')" class="contact-btn whatsapp-btn">
+          💬 WhatsApp Chat
+        </button>
+
+      </div>
+
     </div>
-  </section>
 
-  <footer>
-    <p>© 2025 Muhammed Jaseem. All rights reserved.</p>
-  </footer>
+  </section>
 
   <script src="script.js"></script>
 </body>
+
 </html>

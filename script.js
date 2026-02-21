@@ -1,5 +1,15 @@
+window.addEventListener("load", function () {
+  if (window.location.hash) {
+    window.history.replaceState(null, null, window.location.pathname);
+    window.scrollTo(0, 0);
+  }
+});
+
 // Typing animation
-const text = ["Web Developer", "Python & Django Learner", "React Enthusiast", "Problem Solver"];
+const text = ["Full Stack Web Developer",
+  "React & Django Developer",
+  "Building Scalable Web Applications",
+  "Clean Code & Modern UI"];
 let index = 0, charIndex = 0;
 const typingElement = document.querySelector(".typing-text");
 
@@ -32,32 +42,38 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
 }, appearOptions);
 faders.forEach(fader => appearOnScroll.observe(fader));
 
-// Contact form
-document.getElementById("contactForm").addEventListener("submit", e => {
-  e.preventDefault();
-  alert("Message Sent! 🚀 Thank you for contacting me.");
-});
 
-// Mobile Menu
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-menuToggle.addEventListener("click", () => navLinks.classList.toggle("show"));
 
-// === Theme Toggle ===
-const themeToggle = document.getElementById("themeToggle");
-const body = document.body;
+// mail 
+document.addEventListener("DOMContentLoaded", function () {
 
-// Load saved theme
-if (localStorage.getItem("theme") === "light") {
-  body.classList.replace("dark", "light");
-  themeToggle.textContent = "☀️";
-}
+  const emailBtn = document.getElementById("emailBtn");
 
-// Toggle theme
-themeToggle.addEventListener("click", () => {
-  body.classList.toggle("light");
-  body.classList.toggle("dark");
-  const isLight = body.classList.contains("light");
-  themeToggle.textContent = isLight ? "☀️" : "🌙";
-  localStorage.setItem("theme", isLight ? "light" : "dark");
+  emailBtn.addEventListener("click", function () {
+
+    const subject = "Hiring Opportunity";
+    const body = "Hello Muhammed Jaseem,\n\nI reviewed your portfolio and would like to discuss an opportunity.\n\nLooking forward to your response.";
+
+    const isMobile =
+      /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+      window.matchMedia("(max-width: 768px)").matches;
+
+    if (isMobile) {
+      window.location.href =
+        "mailto:muhammedjaseemx@gmail.com?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body);
+    } else {
+      window.open(
+        "https://mail.google.com/mail/?view=cm&fs=1&to=muhammedjaseemx@gmail.com&su=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body),
+        "_blank"
+      );
+    }
+
+  });
+
 });
