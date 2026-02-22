@@ -197,7 +197,7 @@ h2 {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
@@ -217,7 +217,7 @@ h2 {
 
 .project-card img {
   width: 100%;
-  height: 180px;
+  height: auto;
   object-fit: cover;
   border-bottom: #000 1px solid;
 }
@@ -278,9 +278,9 @@ h2 {
 /* --- Contact --- */
 
 .contact-section {
-  padding: 100px 20px;
+  padding: 120px 20px;
   text-align: center;
-  background: radial-gradient(circle at bottom, #17202f, #0f172a);
+  background: radial-gradient(circle at bottom, #17202e, #111c33);
 }
 
 .contact-box h2 {
@@ -380,6 +380,10 @@ button.contact-btn {
 
   section {
     padding: 60px 15px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 
   .project-info p {

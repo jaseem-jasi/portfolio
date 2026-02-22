@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   emailBtn.addEventListener("click", function () {
 
-    const subject = "Hiring Opportunity";
-    const body = "Hello Muhammed Jaseem,\n\nI reviewed your portfolio and would like to discuss an opportunity.\n\nLooking forward to your response.";
+    const subject = "Project Inquiry";
+    const body = "Hello Muhammed Jaseem,\n\nI reviewed your portfolio and would like to discuss a project.\n\nLooking forward to your response.";
 
     const isMobile =
       /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
